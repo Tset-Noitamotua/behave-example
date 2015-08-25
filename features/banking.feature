@@ -1,5 +1,6 @@
 Feature: Actions with customers and accounts
 
+  @basic
   Scenario: create a new customer
     Given we have a new customer
     Then the customer should have 0 accounts
@@ -29,7 +30,7 @@ Feature: Actions with customers and accounts
     Examples: Withdrawals
       | some money | leftover balance |
       |  10.50     | 189.50           |
-      |  55.50     |  44.50           |
+      |  55.50     | 144.50           |
       | 100.00     | 100.00           |
 
   Scenario: withdraw more money than available
